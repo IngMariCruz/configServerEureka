@@ -1,0 +1,73 @@
+ALUMNO
+listar
+	GET: http://localhost:8081/listar
+	GET: http://localhost:8090/api/listar
+Crear
+	POST: http://localhost:8081/crear
+	POST: http://localhost:8090/api/crear
+{
+    "nombre": "",
+    "apellido": "",
+    "email": "@gmail.com"
+}
+buscar 1
+	GET: http://localhost:8081/buscar/{id}
+	GET: http://localhost:8090/api/buscar/{id}
+
+actualizar
+	PUT: http://localhost:8081/{id}
+	PUT: http://localhost:8090/api/{id}
+{
+    "nombre": "Mariana",
+    "apellido": "Cruz",
+    "email": "mariana@gmail.com"
+}
+
+eliminar
+	DELETE: http://localhost:8081/borrar/{id}
+	DELETE: http://localhost:8090/api/borrar/{id}
+
+
+CURSO
+
+listar
+	GET: http://localhost:8082/listar
+	GET: http://localhost:8090/curso/listar
+
+Crear
+	POST: http://localhost:8082/crear
+	POST: http://localhost:8090/curso/crear
+{
+    "nombre": ""
+}
+
+buscar 1
+	GET: http://localhost:8082/buscar/{id}
+	GET: http://localhost:8090/curso/buscar/{id}
+
+actualizar
+	PUT: http://localhost:8082/editar/{id}
+	PUT: http://localhost:8090/curso/editar/{id}
+{
+    "nombre": ""
+}
+
+eliminar
+	DELETE: http://localhost:8082/borrar/{id}
+	DELETE: http://localhost:8090/curso/borrar/{id}
+
+Asignar Alumno
+	PUT: http://localhost:8082/{id}/asignar-alumno
+	PUT: http://localhost:8090/curso/{id}/asignar-alumno
+[
+  {
+    "id": 1
+  }
+]
+
+Eliminar Alumno
+	PUT: http://localhost:8082/2/eliminar-alumno
+	PUT: http://localhost:8090/curso/{id}/eliminar-alumno
+{
+    "id": 1
+}
